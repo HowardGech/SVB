@@ -15,6 +15,6 @@ git commit -m "$commitMessage"
 
 git push
 
-exit 0
+trap 'exit' ERR
 
-read
+exit 0
