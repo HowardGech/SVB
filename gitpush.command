@@ -15,6 +15,4 @@ git commit -m "$commitMessage"
 
 git push
 
-trap 'exit' ERR
-
-exit 0
+kill `ps -A | grep -w Terminal.app | grep -v grep | awk '{print $1}'`
