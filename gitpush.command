@@ -15,4 +15,14 @@ git commit -m "$commitMessage"
 
 git push
 
+if [ $? -eq 0 ]; then
+    echo "Push succeeds."
+else
+    echo "Push failed with exit status $?."
+fi
+
+echo 'Press Enter to Exit'
+
+read
+
 kill `ps -A | grep -w Terminal.app | grep -v grep | awk '{print $1}'`
