@@ -15,4 +15,6 @@ git commit -m "$commitMessage"
 
 git push
 
+exit 0
+
 read
